@@ -4,7 +4,7 @@
 {% block content %}
     <p>Home Page</p>
 
-    <a href="{{ url_for('spam_bp.inbox') }}">Спам</a>
+    <a href="{{ url_for('spam_bp.spam') }}">Спам</a> | <a href="{{ url_for('send_mail_bp.menu') }}">Написать письмо</a>
     <ul>
         {% for email in emails %}
             <li>
