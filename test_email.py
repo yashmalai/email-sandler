@@ -28,10 +28,11 @@ imap.login(os.getenv('EMAIL'), os.getenv('PASS'))
 
 imap.select_folder('INBOX', readonly=True)
 uids = imap.search(['SINCE', datetime.date(2024, 9, 20)])
-print(uids)
+# print(uids)
 
 rawMessages = imap.fetch([7513], ['BODY[]', 'FLAGS'])
 mess = pyzmail.PyzMessage.factory(rawMessages[7513][b'BODY[]'])
 print(mess.get_addresses('from'))
-
+import pprint
+pprint.pprint(imap.list_folders())
 imap.logout()

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block title %}Спам{% endblock %}
+
+{% block content %}
+    <p>Spam Page</p>
+
+    <a href="{{ url_for('inbox_bp.inbox') }}">Входящие сообщения</a> 
+    <ul>
+        {% for email in emails %}
+            <li>
+                <strong>From:</strong> {{ email.from }} | <strong>Subject:</strong> {{ email.subject }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

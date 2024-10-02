@@ -1,0 +1,2 @@
+     | <a href="{{ url_for('app.write_email') }}">Write Email</a>
+    | <a href="{{ url_for('main.write_email') }}">Write Email</a>
