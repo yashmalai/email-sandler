@@ -23,8 +23,8 @@ smtp.sendmail('islamov204@yandex.ru',
               'Subject: test. \nTest messge to friend')
 smtp.quit()
 
-# imap = imapclient.IMAPClient('imap.yandex.ru', ssl=True)
-# imap.login(os.getenv('EMAIL'), os.getenv('PASS'))
+imap = imapclient.IMAPClient('imap.yandex.ru', ssl=True)
+imap.login(os.getenv('EMAIL'), os.getenv('PASS'))
 
 # imap.select_folder('INBOX', readonly=True)
 # uids = imap.search(['SINCE', datetime.date(2024, 9, 20)])
