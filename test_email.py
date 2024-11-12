@@ -1,8 +1,8 @@
 import smtplib
 import os
-import dotenv
-import imapclient
-import pyzmail
+# import dotenv
+# import imapclient
+# import pyzmail
 import datetime
 import imaplib
 
